@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- biblioteca de icones - fontawesome(cdn) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="w-full h-dvh box-border bg-stone-900">
+    <header
+      class="w-full bg-neutral-900 fixed py-4 px-12 border-b border-b-stone-800 flex items-center justify-between"
+    >
+      <!-- img logo full rounded -->
+      <div class="flex items-center justify-center gap-2">
+        <div
+          class="w-12 h-12 overflow-hidden rounded-full outline-2 outline-stone-600 hover:outline-violet-800 hover:-translate-x-2 transition-all ease-in-out duration-500 cursor-pointer"
+        >
+          <img src="assets/MyPerson.jpg" alt="logo perfil" />
+        </div>
+
+        <h1 class="text-lg text-stone-600 font-bold">
+          Ryan<span
+            class="text-xl bg-clip-text bg-gradient-to-tl from-violet-800 to-cyan-500 text-transparent"
+            >Dev</span
+          >
+        </h1>
+      </div>
+
+      <div
+        class="flex items-center text-2xl font-extrabold bg-clip-text bg-gradient-to-tl from-violet-800 to-orange-800 text-transparent"
+      >
+        <h2>Lógica Challenge - Alura </h2>
+      </div>
+
+      <nav>
+        <ul class="flex gap-2 items-center justify-center">
+          <li
+            class="text-violet-800 text-2xl hover:scale-110 ease-in-out duration-400 transition-transform"
+          >
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+          </li>
+          <li
+            class="text-[#0A66C2] text-2xl hover:scale-110 ease-in-out duration-400 transition-transform"
+          >
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main
+      class="w-full bg-amber-50 h-dvh flex items-center justify-center flex-1/2"
+    >
+      <!-- seção de imagem ilustrativa -->
+      <section class="w-full h-full flex items-center">
+        <div class="w-full flex items-center justify-center">
+          <img
+            class="w-[70%]"
+            src="assets/img-suprise.svg"
+            alt="imagem ilustrativa"
+          />
+        </div>
+      </section>
+
+      <!-- lista do amigo secreto  -->
+      <section
+        class="w-full h-full flex flex-col items-center justify-center gap-6"
+      >
+        <!-- campo texto -->
+        <div class="w-full flex items-center justify-center">
+          <h2 id="texto-secreto" class="text-4xl text-violet-700 font-bold">
+            Digite o nome de seus amigos:
+          </h2>
+        </div>
+
+        <div class="w-full flex flex-col items-center justify-center gap-2">
+          <!-- campo de digitar e lista abaixo dos amigos selecionados -->
+
+          <div class="flex items-center justify-center text-center">
+            <input
+              id="input-amigos"
+              type="text"
+              placeholder="Digite o nome do amigo:"
+              class="w-80 py-2 px-4 font-medium border-2 border-stone-800 rounded-l-full focus:outline-none"
+          />
+            <button
+            id="botao-adicionar"
+              class="py-2 px-4 bg-stone-800 border-2 border-stone-800 rounded-r-full cursor-pointer hover:bg-green-500 transition-all duration-300 ease-in-out"
+            >
+              <span class=" text-sm text-white"><span><i class="fa-solid fa-plus"></i></span> Adicionar</span>
+            </button>
+          </div>
+
+          <ul id="lista-amigos" class="w-96 py-2 px-4 mb-8 bg-white border-2 border-stone-800 rounded-lg shadow-lg list-none max-h-28 overflow-y-auto scroll-auto">
+            <!-- Lista de amigos será preenchida aqui -->
+             <!-- altura de 104px -->
+          </ul>
+
+          <!-- From Uiverse.io by themrsami -->
+          <button
+            onclick="sortearAmigoSecreto()"
+            class="relative px-8 py-3 bg-black text-white font-semibold rounded-full border-2 border-purple-500 hover:border-purple-400 transition-all duration-300 hover:shadow-[0_0_20px_10px_rgba(168,85,247,0.6)] active:scale-95 active:shadow-[0_0_10px_5px_rgba(168,85,247,0.4)] group"
+          >
+            <span class="flex items-center space-x-2">
+             <i class="fa-solid fa-gift text-violet-500"></i>
+              <span>Sortear Amigo</span>
+            </span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
